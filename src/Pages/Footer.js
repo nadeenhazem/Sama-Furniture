@@ -6,6 +6,7 @@ import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Footer() {
+    
     return (
         <footer
             className="text-center text-lg-start text-dark"
@@ -25,23 +26,23 @@ function Footer() {
                         <FontAwesomeIcon icon={faFacebook} />
                     </Link>
 
-                    <Link to='' class="text-white me-4" style={{ fontSize: '30px' }}>
+                    <Link to='' className="text-white me-4" style={{ fontSize: '30px' }}>
                         <FontAwesomeIcon icon={faTwitter} />
                     </Link>
 
-                    <Link to='' class="text-white me-4" style={{ fontSize: '30px' }}>
+                    <Link to='' className="text-white me-4" style={{ fontSize: '30px' }}>
                         <FontAwesomeIcon icon={faGoogle} />
                     </Link>
 
-                    <Link to='' class="text-white me-4" style={{ fontSize: '30px' }}>
+                    <Link to='' className="text-white me-4" style={{ fontSize: '30px' }}>
                         <FontAwesomeIcon icon={faInstagram} />
                     </Link>
 
-                    <Link to='' class="text-white me-4" style={{ fontSize: '30px' }}>
+                    <Link to='' className="text-white me-4" style={{ fontSize: '30px' }}>
                         <FontAwesomeIcon icon={faLinkedinIn} />
                     </Link>
 
-                    <Link to='' class="text-white me-4" style={{ fontSize: '30px', color: '#3b5998' }}>
+                    <Link to='' className="text-white me-4" style={{ fontSize: '30px', color: '#3b5998' }}>
                         <FontAwesomeIcon icon={faGithub} />
                     </Link>
                 </div>
@@ -74,13 +75,13 @@ function Footer() {
                                 <Link to="#!" className="text-dark" style={{ textDecoration: 'none' }}>License</Link>
                             </p>
                             <p>
-                                <Link to="#!" class="text-dark" style={{ textDecoration: 'none' }}>Police Privacy</Link>
+                                <Link to="#!" className="text-dark" style={{ textDecoration: 'none' }}>Police Privacy</Link>
                             </p>
                             <p>
-                                <Link to="#!" class="text-dark" style={{ textDecoration: 'none' }}>Terms Of Use</Link>
+                                <Link to="#!" className="text-dark" style={{ textDecoration: 'none' }}>Terms Of Use</Link>
                             </p>
                             <p>
-                                <Link to="#!" class="text-dark" style={{ textDecoration: 'none' }}>Help Center</Link>
+                                <Link to="#!" className="text-dark" style={{ textDecoration: 'none' }}>Help Center</Link>
                             </p>
                         </div>
 

@@ -19,7 +19,7 @@ import { Container } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
-
+import { Link } from 'react-router-dom';
 
 function Categoure() {
   const img = [sofa1, lamp, tree, capin, bed, chair1, table1];
@@ -43,10 +43,10 @@ function Categoure() {
                 </Card.Title>
                 <div key={idx} style={{ borderRadius: '50%' }} >
 
-                  <a href='https://play.anghami.com/mymusic' >
+                  <Link to='/beds' >
                     <Card.Img variant="top" src={img[idx]} style={{ height: '300px' }} />
 
-                  </a>
+                  </Link>
                 </div>
 
               </Card>

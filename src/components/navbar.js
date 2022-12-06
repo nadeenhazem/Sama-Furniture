@@ -6,11 +6,27 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styling/Home.css'
 import { FaSistrix, FaRegHeart } from "react-icons/fa";
 import { BsCart4 } from "react-icons/bs";
-import { GiWorld } from "react-icons/gi";
+import {  GiWorld } from "react-icons/gi";
+import { Link } from 'react-router-dom';
+import { useEffect ,useState } from 'react';
 
-import { FiMenu } from "react-icons/fi";
 function Navbaritem() {
-    
+  // const Count=localStorage.getItem('cartcount')
+  const [datafetch,setDataFetch]= useState([])
+    useEffect(()=>{
+        fetchData()
+  
+    },[])
+    const fetchData=async()=>{
+        const res=await fetch('http://localhost:5000/bed');
+        setDataFetch(await res.json())    
+    } 
+
+
+    const AllCartitems=datafetch.filter(Cartitem=>{
+        return Cartitem.addToCart === true;
+      })
+      console.log(AllCartitems.length)
     return (
         <>
           
@@ -30,8 +46,13 @@ function Navbaritem() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <FaSistrix className='nav-icons'/>
-            <FaRegHeart className='nav-icons'/>
-            <BsCart4 className='nav-icons'/>
+            <Link to={'/fav'} style={{ color: 'black'}}><FaRegHeart className='nav-icons'/></Link>
+            <Link to={'/Cart'} style={{ color: 'black'}}><BsCart4 className='nav-icons'/>
+            </Link>
+            <span style={{backgroundColor:' #B4CDE6',marginLeft:'-15px',marginTop:'-3px',height:'20px',padding:'0px 5px',borderRadius:'50px',textAlign:'center',maxWidth:'20px'}}>
+ {AllCartitems.length}</span>
+            
+            
             
             <button className='lang-btn'><GiWorld/>Language</button>
           </Nav>
