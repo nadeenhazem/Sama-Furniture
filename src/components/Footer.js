@@ -21,30 +21,30 @@ function Footer() {
                 </div>
 
                 <div>
-                    <Link to='' className="text-white me-4" style={{ fontSize: '30px' }}>
+                    <a href='https://www.facebook.com' className="text-white me-4" style={{ fontSize: '30px' }}>
 
                         <FontAwesomeIcon icon={faFacebook} />
-                    </Link>
+                    </a>
 
-                    <Link to='' className="text-white me-4" style={{ fontSize: '30px' }}>
+                    <a href='https://www.twitter.com/' className="text-white me-4" style={{ fontSize: '30px' }}>
                         <FontAwesomeIcon icon={faTwitter} />
-                    </Link>
+                    </a>
 
-                    <Link to='' className="text-white me-4" style={{ fontSize: '30px' }}>
+                    <a href='https://www.google.com/' className="text-white me-4" style={{ fontSize: '30px' }}>
                         <FontAwesomeIcon icon={faGoogle} />
-                    </Link>
+                    </a>
 
-                    <Link to='' className="text-white me-4" style={{ fontSize: '30px' }}>
+                    <a href='https://www.instagram.com' className="text-white me-4" style={{ fontSize: '30px' }}>
                         <FontAwesomeIcon icon={faInstagram} />
-                    </Link>
+                    </a>
 
-                    <Link to='' className="text-white me-4" style={{ fontSize: '30px' }}>
+                    <a href='https://www.linkedin.com' className="text-white me-4" style={{ fontSize: '30px' }}>
                         <FontAwesomeIcon icon={faLinkedinIn} />
-                    </Link>
+                    </a>
 
-                    <Link to='' className="text-white me-4" style={{ fontSize: '30px', color: '#3b5998' }}>
+                    <a href='https://www.github.com/' className="text-white me-4" style={{ fontSize: '30px', color: '#3b5998' }}>
                         <FontAwesomeIcon icon={faGithub} />
-                    </Link>
+                    </a>
                 </div>
             </section>
 

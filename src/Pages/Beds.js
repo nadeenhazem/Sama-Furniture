@@ -73,7 +73,6 @@ const res=await fetch(`http://localhost:5000/bed/${cartitem.id}`,
         <div className='container'>
             <br></br>
             <h1 style={{ textAlign: 'center', color: '#0f6f9b' }}>--BEDS--</h1>
-            {/* <p style={{ textAlign: 'center', fontSize: '23px', color: '#1f8dc0', marginLeft: '20px' }}>New & Now Furnature Shop</p> */}
             <br></br>
 
             <br></br>

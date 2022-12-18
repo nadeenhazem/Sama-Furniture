@@ -5,7 +5,7 @@ import {MDBContainer,
    }
      from 'mdb-react-ui-kit';
      import sofa from '../Imgs/sofa3.png'
-     import '../styling/Home.css'
+     import '../Sass/Home.scss'
      import Categoure from './Categoure';
 
 function Home() {

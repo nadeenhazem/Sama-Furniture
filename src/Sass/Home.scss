@@ -1,0 +1,35 @@
+$color_1: white;
+$background-color_1: #D8D8D8;
+$background-color_2: #B4CDE6;
+$background-color_3: #98b2cc;
+$border-color_1: #B4CDE6;
+
+.Home-container {
+	background-color: $background-color_1;
+}
+.Home-img {
+	background-color: $background-color_2;
+	border-radius: 50%;
+}
+#Home-btn {
+	color: $color_1;
+	font-weight: bolder;
+	font-size: x-large;
+	background-color: $background-color_3;
+	border-color: $border-color_1;
+	border-radius: 20px;
+	max-height: 50px;
+}
+
+
+
+.container-cag {
+	margin-top: 5%;
+}
+.cag-img {
+	&:hover {
+		transform: scale(1.1);
+		background-color: $background-color_1;
+		border: 20px solid whitesmoke;
+	}
+}

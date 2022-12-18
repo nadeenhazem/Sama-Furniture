@@ -4,7 +4,7 @@
       "id": "1",
       "name": "Sofaa",
       "price": "$300.00",
-      "addToCart": false,
+      "addToCart": true,
       "addToFav": true,
       "img": "https://i.ibb.co/Lnrt4ZS/sofa.png",
       "background": "#f1d4a1",
@@ -14,8 +14,8 @@
       "id": "2",
       "name": "Coffe Table",
       "price": "$250.00",
-      "addToCart": false,
-      "addToFav": true,
+      "addToCart": true,
+      "addToFav": false,
       "img": "https://i.ibb.co/VmBBn5L/table.png",
       "background": "rgb(184 141 92 / 47%)",
       "fontcolor": "rgb(216 116 36 / 88%)"
@@ -24,7 +24,7 @@
       "id": "3",
       "name": "Wood Chair",
       "price": "$200.00",
-      "addToCart": false,
+      "addToCart": true,
       "addToFav": false,
       "img": "https://i.ibb.co/ZdngGCq/chair.png",
       "background": "#5e93ac",
@@ -41,15 +41,121 @@
       "fontcolor": "rgb(155 113 79)"
     }
   ],
+  "categoure": [
+    {
+      "id": "5",
+      "name": "Sofa",
+      "img": "https://i.ibb.co/gVB471t/sofa1.png",
+      "nameColor": "orange"
+    },
+    {
+      "id": "6",
+      "name": "lights",
+      "img": "https://i.ibb.co/09LYMD4/lamp.png",
+      "nameColor": "#98b2cc"
+    },
+    {
+      "id": "7",
+      "name": "Tree",
+      "img": "https://i.ibb.co/1XwS0ym/tree.png",
+      "nameColor": "#B7B7B7"
+    },
+    {
+      "id": "8",
+      "name": "Capin",
+      "img": "https://i.ibb.co/55f6GrX/capin-3.png",
+      "nameColor": "#A1C298"
+    },
+    {
+      "id": "9",
+      "name": "Bed",
+      "img": "https://i.ibb.co/ynNxvVf/bed.png",
+      "nameColor": "#7882A4"
+    },
+    {
+      "id": "10",
+      "name": "Chair",
+      "img": "https://i.ibb.co/Ykd5L97/chair1.png",
+      "nameColor": "#7D9D9C"
+    },
+    {
+      "id": "11",
+      "name": "Table",
+      "img": "https://i.ibb.co/XSqvntD/table1.png",
+      "nameColor": "black"
+    }
+  ],
   "Bed": [
     {
-      "id": "1",
+      "id": "12",
       "name": "new bed",
       "price": "$550.00",
       "addToCart": false,
       "addToFav": false,
       "img": "https://smhttp-ssl-18667.nexcesscdn.net/8090D3/magento/media/catalog/product/cache/1/image/650x650/9df78eab33525d08d6e5fb8d27136e95/U/H/UHR3152QB-bed-uph-sand-1.jpg",
       "background": "#f1d4a1",
+      "fontcolor": "rgb(55 63 146 / 96%)"
+    },
+    {
+      "id": "13",
+      "name": "Coffe Table",
+      "price": "$250.00",
+      "addToCart": false,
+      "addToFav": false,
+      "img": "https://i.ibb.co/VmBBn5L/table.png",
+      "background": "rgb(184 141 92 / 47%)",
+      "fontcolor": "rgb(216 116 36 / 88%)"
+    },
+    {
+      "id": "14",
+      "name": "black bed",
+      "price": "$500.00",
+      "addToCart": false,
+      "addToFav": false,
+      "img": "https://images.costco-static.com/ImageDelivery/imageService?profileId=12026540&imageId=100406387-847__1&recipeName=350",
+      "background": "#f1d4a1",
+      "fontcolor": "rgb(55 63 146 / 96%)"
+    },
+    {
+      "id": "15",
+      "name": "gray child bed",
+      "price": "$250.00",
+      "addToCart": false,
+      "addToFav": false,
+      "img": "https://www.pngplay.com/wp-content/uploads/13/Bunk-Bed-PNG-Clipart-Background.webp",
+      "background": "#f1d4a1",
+      "fontcolor": "rgb(155 113 79)"
+    },
+    {
+      "id": "16",
+      "name": "pink bed",
+      "price": "$500.00",
+      "addToCart": true,
+      "addToFav": false,
+      "img": "https://img.dreams.co.uk/i/dreams/VM0836_DREAMS_BEDFRAMES_20_SC03_SANA_S03_PEARL_ADOBE_98?w=780&h=400&sm=c&fmt=jpg&pecrop=0,1500,0,0",
+      "background": "#f1d4a1",
+      "fontcolor": " #98b2cc"
+    },
+    {
+      "id": "17",
+      "name": "white bed",
+      "price": "$600.00",
+      "addToCart": true,
+      "addToFav": true,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjNCmwDGAf2xARr2099sa4aYTdioiYXKcE9A&usqp=CAU",
+      "background": "#f1d4a1",
+      "fontcolor": "#A1C298"
+    }
+  ],
+  "fav": [
+    {
+      "id": "3",
+      "name": "Wood Chair",
+      "price": "$200.00",
+      "addToCart": false,
+      "addToFav": false,
+      "img": "https://i.ibb.co/ZdngGCq/chair.png",
+      "background": "#5e93ac",
       "fontcolor": "rgb(55 63 146 / 96%)"
     },
     {
@@ -63,45 +169,46 @@
       "fontcolor": "rgb(216 116 36 / 88%)"
     },
     {
-      "id": "3",
-      "name": "black bed",
-      "price": "$500.00",
+      "id": "1",
+      "name": "Sofaa",
+      "price": "$300.00",
       "addToCart": false,
       "addToFav": false,
-      "img": "https://images.costco-static.com/ImageDelivery/imageService?profileId=12026540&imageId=100406387-847__1&recipeName=350",
+      "img": "/static/media/sofa.0c897d92dd3eb273628b.png",
       "background": "#f1d4a1",
-      "fontcolor": "rgb(55 63 146 / 96%)"
+      "fontcolor": "rgb(247 115 9 / 96%)"
+    }
+  ],
+  "Cart": [
+    {
+      "id": "1",
+      "name": "Sofaa",
+      "price": "$300.00",
+      "addToCart": false,
+      "addToFav": true,
+      "img": "https://i.ibb.co/Lnrt4ZS/sofa.png",
+      "background": "#f1d4a1",
+      "fontcolor": "rgb(247 115 9 / 96%)"
     },
     {
-      "id": "4",
-      "name": "gray child bed",
+      "id": "2",
+      "name": "Coffe Table",
       "price": "$250.00",
       "addToCart": false,
       "addToFav": false,
-      "img": "https://www.pngplay.com/wp-content/uploads/13/Bunk-Bed-PNG-Clipart-Background.webp",
-      "background": "#f1d4a1",
-      "fontcolor": "rgb(155 113 79)"
+      "img": "https://i.ibb.co/VmBBn5L/table.png",
+      "background": "rgb(184 141 92 / 47%)",
+      "fontcolor": "rgb(216 116 36 / 88%)"
     },
     {
-      "id": "5",
-      "name": "pink bed",
-      "price": "$500.00",
-      "addToCart": true,
-      "addToFav": true,
-      "img": "https://img.dreams.co.uk/i/dreams/VM0836_DREAMS_BEDFRAMES_20_SC03_SANA_S03_PEARL_ADOBE_98?w=780&h=400&sm=c&fmt=jpg&pecrop=0,1500,0,0",
-      "background": "#f1d4a1",
-      "fontcolor": " #98b2cc"
-    },
-    {
-      "id": "6",
-      "name": "white bed",
-      "price": "$600.00",
-      "addToCart": true,
-      "addToFav": true,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjNCmwDGAf2xARr2099sa4aYTdioiYXKcE9A&usqp=CAU",
-      "background": "#f1d4a1",
-      "fontcolor": "#A1C298"
+      "id": "3",
+      "name": "Wood Chair",
+      "price": "$200.00",
+      "addToCart": false,
+      "addToFav": false,
+      "img": "https://i.ibb.co/ZdngGCq/chair.png",
+      "background": "#5e93ac",
+      "fontcolor": "rgb(55 63 146 / 96%)"
     }
-  ],
-  "fav": []
+  ]
 }
