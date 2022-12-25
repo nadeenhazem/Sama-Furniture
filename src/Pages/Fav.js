@@ -1,21 +1,22 @@
 import React from 'react';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchData } from '../Redux/Slices/RequistSlice';
 
 function Fav() {
-    const [datafetch, setDataFetch] = useState([])
+    const dispatch=useDispatch();
+    const NameOfMainPage = 'fav';
+    const Fav =useSelector(state=>state.Data.data);
 
     useEffect(() => {
-        fetchData()
-    }, [])
+        dispatch(fetchData(NameOfMainPage))
+    }, [dispatch])
 
-    const fetchData = async () => {
-        const res = await fetch('http://localhost:5000/Fav');
-        setDataFetch(await res.json())
-    }
-
+    
 
     return (
-        <>
+        
+            Fav == null?'Loading':<>
             <div className='container'>
                 <br></br>
                 <h1 style={{ textAlign: 'center', color: '#0f6f9b' }}>--Favorite--</h1>
@@ -24,26 +25,28 @@ function Fav() {
 
                 <div className="row row-cols-1 row-cols-md-3 g-4">
                     {
-                        datafetch.map((items) => {
+                        Fav.map((items) => {
                             return (
-                                <div className="col" key={items.id}>
-                                    <div className="card" style={{ border: '0 solid whitesmoke', backgroundColor: '#eeeeee' }} >
-                                        <img src={items.img} className="card-img-top" style={{ maxHeight: '280px' }} alt='' />
+                                <section className=" my-5 " key={items.id} style={{ maxWidth: '30rem' }}>
+                                <div className="card" style={{ border: '0 solid whitesmoke', backgroundColor: '#eeeeee' }} >
+                                        <img src={items.img} className="card-img-top" style={{ height: '20rem' }} alt='' />
                                         <div className="card-body">
                                             <h2 className="card-title" style={{ color: items.fontcolor }}>{items.name}</h2>
-                                            <p className="card-text" style={{ fontSize: '24px' }}>{items.price}
+                                            <p className="card-text" style={{ fontSize: '24px',display:'inline' }}>{items.price}
                                             </p>
+                                                                
+                                                        
 
                                         </div>
                                     </div>
-                                </div>
+                                </section>
                                 )
                         }
                         )}
                 </div>
             </div>
-            <br></br>
-        </>
+            <br></br></>
+        
     );
 }
 

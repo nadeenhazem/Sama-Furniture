@@ -2,7 +2,7 @@ $color_1: black;
 $font-family_1: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 $background-color_1: antiquewhite;
 $background-color_2: #B4CDE6;
-
+$color_2:#8d8b8b;
 .home-navbar {
 	margin: 0px !important;
 	padding: 0px !important;
@@ -58,4 +58,14 @@ $background-color_2: #B4CDE6;
 	top: 3px;
 	padding-right: 22%;
 	font-size: 25px;
+}
+.trash-icon{
+	font-size: 25px;
+	 cursor: pointer;
+	 margin-left: 65%;
+	 display: inline;
+	 color:$color_2;
+}
+.trash-icon:hover{
+	color: red;
 }

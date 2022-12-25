@@ -1,19 +1,17 @@
 import React from 'react';
-import { useEffect ,useState } from 'react';
+import { useEffect  } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchData } from '../Redux/Slices/RequistSlice';
 function MainCart() {
-    const [datafetch, setDataFetch] = useState([])
-
+    const Cart=useSelector(state=>state.Data.data);
+    const dispatch=useDispatch();
+    const NameOfMainPage = 'Cart';
     useEffect(() => {
-        fetchData()
-    }, [])
-
-    const fetchData = async () => {
-        const res = await fetch('http://localhost:5000/Cart');
-        setDataFetch(await res.json())
-    }
-    console.log(datafetch)
+        dispatch(fetchData(NameOfMainPage))
+    }, [dispatch])
 
     return (
+        Cart == null?'null':
         <>
 
 <div className='container'>
@@ -24,11 +22,11 @@ function MainCart() {
 
                 <div className="row row-cols-1 row-cols-md-3 g-4">
                     {
-                        datafetch.map((items) => {
+                        Cart.map((items) => {
                             return (
-                                <div className="col" key={items.id}>
+                                <section className=" my-5 " key={items.id} style={{ maxWidth: '30rem' }}>
                                     <div className="card" style={{ border: '0 solid whitesmoke', backgroundColor: '#eeeeee' }} >
-                                        <img src={items.img} className="card-img-top" style={{ maxHeight: '280px' }} alt='' />
+                                        <img src={items.img} className="card-img-top" style={{ height: '20rem' }} alt='' />
                                         <div className="card-body">
                                             <h2 className="card-title" style={{ color: items.fontcolor }}>{items.name}</h2>
                                             <p className="card-text" style={{ fontSize: '24px' }}>{items.price}
@@ -36,7 +34,7 @@ function MainCart() {
 
                                         </div>
                                     </div>
-                                </div>
+                                </section>
                                 )
                         }
                         )}

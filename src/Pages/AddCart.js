@@ -1,54 +1,23 @@
-
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from 'react';
+import '../Sass/Buy.scss'
+import visa from '../Imgs/visa.png';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 function AddCart(props){
-    console.log(props.location.state)
     
 const item=props.location.state.items
-console.log(item)
-    const AddCartPage=async (item1)=>{
-        console.log(item1)
-        await fetch(`http://localhost:5000/Cart`,
-            {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-
-                body: JSON.stringify(item1)
-            }
-        )
-        
-        window.location.reload();
-
-    }
-    const DeleteCart= async(item1)=>{
-         await fetch(`http://localhost:5000/Cart/${item1.id}`,{method:'DELETE'});
-    }
-
-    const updateCart = async (item1) => {
-
-        let CartValue;
-        if(item1.addToCart){
-            CartValue = { ...item1, addToCart: false };
-            DeleteCart(item1);
-        }
-        else{
-            CartValue = { ...item1, addToCart: true };
-            AddCartPage(item1)   
-        }
-        const res=await fetch(`http://localhost:5000/NewFur/${item1.id}`,
-            {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-
-                body: JSON.stringify(CartValue)
-            }
-        )
-        // window.location.reload();
-        console.log(CartValue)
-    }
+const [show, setShow] = useState(false);
+const handleClose = () => setShow(false);
+const handleShow = () => setShow(true);
+const showMessage = () => {
+    toast.success('Success', {
+        position: toast.POSITION.TOP_CENTER
+    });
+};
 
     return(
         <>
@@ -66,13 +35,13 @@ console.log(item)
                             <img src={item.img} className="card-img-top" style={{  marginTop:'100px' }} alt='...' />
                         </div>
                         <div className="col-md-6">
-                            <div className="card-body">
+                            <div className="buy-card-body">
                                 <h5 className="card-title" style={{ color: item.fontcolor, fontSize: '40px',marginTop:'100px',marginLeft:'50px' }}>{item.name}</h5>
                                 <p className="card-text" style={{ color: '#0f6f9b', fontSize: '30px', marginTop: '30px',marginLeft:'50px' }}>{item.price}</p>
-                                
-                                 <button type="button" style={{ marginLeft: '50px', marginTop: '45px',fontSize:'23px',backgroundColor:item.fontcolor,color:'white',borderRadius:'10px',width:'150px',border:'0',height:'40px' }}
-                                onClick={() =>updateCart(item)}>
-                                    {item.addToCart?'Delete Cart':'Add to Cart'  }
+                                <p className="card-text" style={{ color: '#0f6f9b', fontSize: '25px', marginTop: '30px',marginLeft:'50px' }}>Colors:{item.Colors}</p>
+                                 <button type="button" className='btn-buy'style={{backgroundColor:item.fontcolor}}
+                                onClick={handleShow}>
+                                   Buy Now
                         
                                                     
                                                     </button>
@@ -88,8 +57,54 @@ console.log(item)
 
 
 
-    </div>     
+    </div> 
+    <Modal show={show} onHide={handleClose} >
+        <Modal.Header closeButton style={{backgroundColor:'rgb(240, 242, 243)'}}>
+          <Modal.Title>PAYMENT DETAILS</Modal.Title>
+        </Modal.Header>
+        <Modal.Body style={{backgroundColor:'rgb(240, 242, 243)'}}>
+        <form className="card-details" style={{margin:'0% 10%',paddingLeft:'20%'}} >
+                             <div className="">
+                                     <h4 className="Card-Name">Card Number</h4> 
+                                       <input type="text" name="card-num" placeholder="1234 5678 9012 3457"
+                                             size="17" id="cno" minLength="19" maxLength="19"
+                                             className='Input-Style'/>
+                                    <img src={visa} width="64px" height="60px" />
+                            </div>
+    
+                            <div className="form-group">
+                                <p className="Card-Name mb-0">Cardholder's Name</p>
+                                <input type="text" name="name" 
+                                className='Input-Style'placeholder="Name" size="17"/>
+                             </div>
+                             <div className="form-group pt-2">
+                                <div className="row d-flex">
+                                    <div className="col-sm-6">
+                                        <p className="Card-Name mb-0">Expiration</p>
+                                         <input type="text" 
+                                         className='Input-Style' name="exp" placeholder="MM/YYYY" size="7" id="exp" minLength="7" maxLength="7"/>
+                                     </div>
+                                     <div className="col-sm-3">
+                                         <p className="Card-Name mb-0">Cvv</p>
+                                         <input type="password"
+                                         className='Input-Style'  name="cvv" placeholder="&#9679;&#9679;&#9679;" size="1" minLength="3" maxLength="3"/>
+                                    </div>
+                                 <br/>
+                                     
+                                </div>
+                            </div>		
+                        </form>
+                        <Button variant="primary" 
+                        style={{marginLeft:'25%',marginTop:'5%',width:'50%',fontSize:'20px'}}
+          onClick={showMessage}>
+            Buy
+          </Button>
+          <ToastContainer />
+        </Modal.Body>
+      
+      </Modal>  
+      
         </>
     )
 }
-export default AddCart
+export default AddCart;

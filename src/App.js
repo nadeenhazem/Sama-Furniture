@@ -6,7 +6,7 @@ import Footer from './components/Footer.js';
 import Navbaritem from './components/navbar';
 import Home from './Pages/Home';
 import AddCart from './Pages/AddCart';
-import Beds from './Pages/Beds';
+import OneCategoury from './Pages/OneCategoury';
 import Fav from './Pages/Fav';
 import MainCart from './Pages/MainCart';
 import Categoure from './Pages/Categoure';
@@ -24,7 +24,7 @@ function App() {
           <Route exact path={"/fav"} component={Fav} />
           <Route exact path={"/AddCart/:id"} component={AddCart} />
           <Route exact path={"/Cart"} component={MainCart} />
-          <Route exact path={"/Beds"} component={Beds} />
+          <Route exact path={"/OneCategoury/:name"} component={OneCategoury} />
 
 
         </Switch>
@@ -33,8 +33,6 @@ function App() {
       </div>
 
     </BrowserRouter>
-
-
   );
 }
 

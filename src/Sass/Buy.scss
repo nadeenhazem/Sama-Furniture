@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+$color_1: #63798e;
+$color_2: white;
+
+.btn {
+	background: #98b2cc !important;
+	border: none;
+	border-radius: 30px;
+	text-align: center;
+	&:focus {
+		box-shadow: none;
+	}
+}
+.Card-Name {
+	color: $color_1;
+}
+.Input-Style {
+	border-radius: 20px;
+	border: 1px solid #98b2cc;
+	margin-right: 5%;
+	font-size: larger;
+	max-width: max-content;
+}
+.btn-buy {
+	margin-left: 50px;
+	margin-top: 45px;
+	font-size: 23px;
+	color: $color_2;
+	border-radius: 10px;
+	width: 150px;
+	border: 0;
+	height: 40px;
+}
+@media screen and (max-width:768px) {
+	.buy-card-body {
+		margin-top: -45%;
+	}
+}

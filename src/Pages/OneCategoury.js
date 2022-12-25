@@ -6,12 +6,14 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchData, AddNewData, DeleteData, UpdateData } from "../Redux/Slices/RequistSlice";
 import { BsCart4 } from "react-icons/bs";
-function NewFurnature() {
+
+function OneCategoury(props) {
+    const item = props.location.state.items
     const dispatch = useDispatch();
-    const NameOfMainPage = 'NewFur';
+    const NameOfMainPage = item.name;
     const NameOfFavPage = 'fav'
     const NameOfCartPage = 'Cart'
-    const NewFur = useSelector(state => state.Data.data);
+    const categ = useSelector(state => state.Data.data);
 
 
     useEffect(() => {
@@ -58,20 +60,24 @@ function NewFurnature() {
 
 
     return (
-        NewFur == null ? 'Loading' :
+        categ == null ? 'Loading' :
             <>
-                <div className="container" >
-                    <br />
-                    <h1 style={{ textAlign: 'center', color: '#0f6f9b' }}>--Sama Wood Shop</h1>
-                    <p style={{ textAlign: 'center', fontSize: '23px', color: '#1f8dc0', marginLeft: '20px' }}>New & Now Furnature Shop</p>
+
+
+                <div className='container'>
+                    <br></br>
+                    <h1 style={{ textAlign: 'center', color: '#0f6f9b' }}>--{item.name}--</h1>
+                    <br></br>
+
+                    <br></br>
                     <div className="row row-cols-1 row-cols-md-3 g-4">
 
+
+
+
                         {
-                            NewFur.map((items) => {
+                            categ.map((items) => {
                                 return (
-
-
-
                                     <section className=" my-5 " key={items.id} style={{ maxWidth: '30rem' }}>
 
                                         <div className="card " style={{ border: '0 solid whitesmoke', backgroundColor: '#eeeeee', margin: '2%' }} >
@@ -84,7 +90,7 @@ function NewFurnature() {
 
                                                 <div className="bg-image hover-overlay ripple rounded-0" >
                                                     <img className="img-fluid" src={items.img}
-                                                        style={{ backgroundColor: items.background }}
+                                                        style={{ backgroundColor: items.background ,width:'99%',height: '20rem'}}
                                                         alt=".." />
 
                                                 </div>
@@ -123,23 +129,18 @@ function NewFurnature() {
                                             </div>
                                         </div>
                                     </section>
-
-
                                 )
-                            })
-                        }
-
+                            }
+                            )}
 
 
                     </div>
-                </div>
 
+                </div>
                 <br></br>
 
             </>
     );
 }
-export default NewFurnature;
 
-
-
+export default OneCategoury;
