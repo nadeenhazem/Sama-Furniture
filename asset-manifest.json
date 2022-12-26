@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/nadeenhazem/Sama-Furniture/static/css/main.34739d31.css",
+    "main.js": "/nadeenhazem/Sama-Furniture/static/js/main.ff06fd9a.js",
+    "static/js/787.78145495.chunk.js": "/nadeenhazem/Sama-Furniture/static/js/787.78145495.chunk.js",
+    "index.html": "/nadeenhazem/Sama-Furniture/index.html",
+    "main.34739d31.css.map": "/nadeenhazem/Sama-Furniture/static/css/main.34739d31.css.map",
+    "main.ff06fd9a.js.map": "/nadeenhazem/Sama-Furniture/static/js/main.ff06fd9a.js.map",
+    "787.78145495.chunk.js.map": "/nadeenhazem/Sama-Furniture/static/js/787.78145495.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.34739d31.css",
+    "static/js/main.ff06fd9a.js"
+  ]
+}
