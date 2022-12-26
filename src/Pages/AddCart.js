@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useState } from 'react';
 import '../Sass/Buy.scss'
-import visa from '../Imgs/visa.png';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import { ToastContainer, toast } from 'react-toastify';
@@ -69,7 +68,7 @@ const showMessage = () => {
                                        <input type="text" name="card-num" placeholder="1234 5678 9012 3457"
                                              size="17" id="cno" minLength="19" maxLength="19"
                                              className='Input-Style'/>
-                                    <img src={visa} width="64px" height="60px" />
+                                    <img src="https://i.ibb.co/k3F3N3M/visa.png" width="64px" height="60px" alt='..'/>
                             </div>
     
                             <div className="form-group">

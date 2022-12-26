@@ -4,7 +4,6 @@ import {MDBContainer,
     MDBCol, MDBRow, MDBBtn, 
    }
      from 'mdb-react-ui-kit';
-     import sofa from '../Imgs/sofa3.png'
      import '../Sass/Home.scss'
      import Categoure from './Categoure';
 
@@ -17,7 +16,7 @@ function Home() {
 
         <MDBCol col='10' md='6'className='Home-img'>
      
-          <img src={sofa} className="img-fluid"  />
+          <img src="https://i.ibb.co/vDb4wyk/sofa3.png" className="img-fluid"  alt='..'/>
         </MDBCol>
 
         <MDBCol col='4' md='6' style={{paddingLeft:'10%'}}>
